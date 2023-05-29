@@ -18,6 +18,9 @@ function drawTable(nrows, ncols)
             cell.style.width="30px";
             cell.style.height="30px";
             cell.style.fontWeight="bold";
+            var new_div=document.createElement("div");
+            new_div.style.display="none";
+            cell.appendChild(new_div);
             row.appendChild(cell);
         }
         table.appendChild(row);
@@ -85,10 +88,9 @@ function initialState()
 function add_numbers(row,col,value)
 {
     var cell=document.querySelector(".r"+row+".c"+col);
-    var new_div=document.createElement("div");
-    new_div.style.display="none";
-    new_div.innerHTML=value.toString();
-    cell.appendChild(new_div);
+    var div=cell.firstChild;
+    div.innerHTML=value.toString();
+    cell.appendChild(div);
 }
 
 function addNumbers()
@@ -249,10 +251,9 @@ function addNumbers()
 function add_bomb_emoji(row,col)
 {
     var cell=document.querySelector(".r"+row+".c"+col);
-    var new_div=document.createElement("div");
-    new_div.style.display="none";
-    new_div.innerHTML="💣";
-    cell.appendChild(new_div);
+    var div=cell.firstChild;
+    div.innerHTML="💣";
+    cell.appendChild(div);
 }
 function addBombs()
 {
@@ -323,6 +324,25 @@ function addBombs()
     add_bomb_emoji(14,14);
 }
 
+function change_pixel(event)
+{
+    var pos=event.target.classList;
+    var row=pos[0].substring(1);
+    var col=pos[1].substring(1);
+    var div=event.target.firstChild;
+    div.style.display="";
+    event.target.style.backgroundColor="#F8F8FF";
+    div.style.color="blue";
+    if(div.innerHTML=="2")
+        div.style.color="green";
+    else if(div.innerHTML=="3")
+        div.style.color="red";
+    else if(div.innerHTML=="4")
+        div.style.color="darkblue";
+    else if(div.innerHTML=="5")
+        div.style.color="darkred";
+}
+
 window.onload=function () 
 {
     let color=JSON.parse(localStorage.getItem("color1"))||"#000";
@@ -331,6 +351,28 @@ window.onload=function ()
     initialState();
     addNumbers();
     addBombs();
+
+    var table=document.getElementById("table");
+    table.onclick=change_pixel;
+    table.addEventListener("contextmenu",(event) => {
+        if(event.target!=event.currentTarget)
+        {
+            event.preventDefault();
+            event.stopPropagation();
+            var cell=event.target;
+            if(cell.innerHTML=="🚩")
+            {
+                cell.innerHTML="";
+                cell.style.backgroundColor="dimgray";
+            }
+            else if(cell.style.backgroundColor=="dimgray")
+            {
+                cell.innerHTML="🚩";
+                cell.style.backgroundColor="#F8F8FF";
+            }
+        }
+    });
+
     var button=document.getElementById("change_background_color");
     button.onclick=function()
     {
@@ -339,7 +381,6 @@ window.onload=function ()
         html.style.backgroundColor="#"+randomColor;
         localStorage.setItem("color1",JSON.stringify("#"+randomColor));
     }
-
 
     button=document.getElementById("clear_screen");
     button.onclick=function()

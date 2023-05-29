@@ -1,4 +1,4 @@
-# Cerințe generale minimale:
+# Cerințe generale minimale HTML + CSS:
 
 - [x] fișiere separate pentru HTML și CSS
 - [x] conținutul site-ului trebuie să aibă sens (nu îl umpleți cu Lorem ipsum)
@@ -18,6 +18,11 @@ CSS:
 - [x] site-ul trebuie să aibă și conținut generat (folosind :after, :before)
 - [x] site-ul trebuie să conțină o tranziție care implică schimbarea mai multor proprietăți la intervale diferite de timp
 - [x] site-ul trebuie să conțină o animație care să modifice mai multe proprietăți ale aceluiași element  
+
+## update feedback partea 1:
+- video embedding
+
+# Cerințe generale minimale JavaScript:
 
 Javascript:
 - [x] fișier separat pentru codul JavaScript
