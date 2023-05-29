@@ -38,4 +38,4 @@ Javascript:
 ### Cerinte extra
 - [x] i18n
 - [x] a11y
-- [] canvas/svg
+- [ ] canvas/svg

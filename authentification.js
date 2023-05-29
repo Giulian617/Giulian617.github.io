@@ -11,7 +11,7 @@ window.onload=function()
         setTimeout(function() 
         {
           alert("Formularul a fost trimis cu succes!");
-          changePage("file:///D:/FMI/Anul%20I/Semestrul%20II/TW/Proiect/index.html");
+          changePage("index.html");
         }, 5000);
       });
 }
