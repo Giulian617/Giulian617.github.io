@@ -1,4 +1,4 @@
-### Cerințe generale minimale:
+# Cerințe generale minimale:
 
 - [x] fișiere separate pentru HTML și CSS
 - [x] conținutul site-ului trebuie să aibă sens (nu îl umpleți cu Lorem ipsum)
@@ -34,3 +34,8 @@ Javascript:
 - [x] folosirea proprietăților classList, target sau currentTarget
 - [x] folosirea metodelor getComputedStyle și stopPropagation
 - [x] validarea datelor dintr-un formular folosind expresii regulate
+
+### Cerinte extra
+- [x] i18n
+- [x] a11y
+- [] canvas/svg
