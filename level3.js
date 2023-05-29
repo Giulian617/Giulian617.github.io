@@ -86,7 +86,7 @@ function change_pixel(event)
 
 window.onload=function () 
 {
-    let color=JSON.parse(localStorage.getItem("color1"))||"#000";
+    let color=JSON.parse(localStorage.getItem("color3"))||"#000";
     document.getElementsByTagName("html")[0].style.backgroundColor=color;
     drawTable(30,30);
     //initialState();
@@ -120,7 +120,7 @@ window.onload=function ()
         var html=document.getElementsByTagName("html")[0];
         var randomColor=Math.floor(Math.random()*16777215).toString(16);
         html.style.backgroundColor="#"+randomColor;
-        localStorage.setItem("color1",JSON.stringify("#"+randomColor));
+        localStorage.setItem("color3",JSON.stringify("#"+randomColor));
     }
 
     button=document.getElementById("clear_screen");
@@ -139,6 +139,6 @@ window.onload=function ()
         var html=document.getElementsByTagName("html")[0];
         alert("This is the code of the color from the last version of the page: "+getComputedStyle(html).backgroundColor+".");
         html.style.backgroundColor="#000";
-        localStorage.setItem("color1",JSON.stringify("#000"));
+        localStorage.setItem("color3",JSON.stringify("#000"));
     };
 }
