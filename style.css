@@ -61,7 +61,7 @@ footer{
     margin: 1em 1em 0em 1em;
 }
 
-iframe{
+#iframe{
     display:flex;
     justify-content:center;
 }
