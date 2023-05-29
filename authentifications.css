@@ -1,0 +1,90 @@
+/* box-sizing for including padding */
+html {
+  box-sizing: border-box;
+  background-color: #000;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#container {
+  font-family: Fira Mono, monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+header {
+  background: #199a2e;
+  text-transform: uppercase;
+  display: block;
+  width: 17em;
+  margin: 1em;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header a {
+  text-decoration: none;
+  display: block;
+  padding: 0.5em 1em;
+  border-top: 1px solid #999;
+  color: #000;
+}
+
+header #special {
+  font-size: 100%;
+  font-style: italic;
+  border-top: 0px;
+  padding: 0.1em;
+}
+
+fieldset {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: none;
+  margin-top: 10px;
+}
+
+#submit {
+  margin-left: 13em;
+  background-color: #199a2e;
+  text-decoration: none;
+  border: 1px solid #999;
+  width: 13em;
+  height: 2em;
+}
+
+/* code for medium screens */
+@media screen and (min-width: 40em) {
+  header ul {
+    display: flex;
+  }
+
+  header li a {
+    border-top: 0;
+  }
+}
+
+/* code for large screens */
+@media screen and (min-width: 80em) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    /* ne permite să includem paddingul 
+    și borderul în lățimea și înălțimea
+    unui element */
+}
+
+html {
+    font: 1.2em/1.4 Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+body {
+    padding: 0;
+    margin-bottom:0;
+}
+
+header {
+    background: #199a2e;
+    text-transform: uppercase;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 1em;
+    border-top: 1px solid #999;
+    color: #000;
+}
+
+header #title {
+    font-size: 100%;
+    font-style: italic;
+    border-top: 0px;
+    padding: 0.1em;
+}
+
+main {
+    padding: 0 1em;
+}
+
+a{
+    text-decoration: none;
+    color: #199a2e;
+}
+
+a:hover:not(.special){
+    color: #e00000;
+}
+
+footer{
+    display:flex;
+    justify-content:flex-end;
+    margin: 1em 1em 0em 1em;
+}
+
+/* code for medium screens */
+@media screen and (min-width: 40em) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1em;
+    }
+
+    header ul {
+        display: flex;
+    }
+
+    header li a {
+        border-top: 0;
+    }
+}
+
+/* code for large screens */
+@media screen and (min-width: 80em) {
+    main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 1em;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <title>Sign-up form</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="authentifications.css" type="text/css">
+  <script type="text/javascript" src="authentification.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1><a href="index.html" id="special">Risky reveals</a></h1>
+  </header>
+  <div id="container">
+    <h3>Sign-up form</h3>
+    <form method="post" action="authentification.html" target="this" id="form">
+      <fieldset>
+        <legend>Personal data</legend>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" pattern="[A-Za-z0-9]{1-20}" required>
+        <br><br>
+        <label for="name">Full name:</label>
+        <input type="text" name="name" id="name" required>
+        <br><br>
+        <label for="image">Profile picture:</label>
+        <input type="file" name="image" id="image" accept="image/*">
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <br><br>
+        <label for="numar_tel">Personal number:</label>
+        <input type="text" name="numar_tel" id="numar_tel" pattern="[0-9]{10}">
+        <br><br>
+        <label for="years_of_exp">Years of experience with minesweeper:</label>
+        <input type="number" name="years_of_exp" id="years_of_exp" min="0" max="100">
+        <br>
+        <p>Are you taking minesweeper seriously?
+          <input type="radio" id="yes" name="contact" value="yes" checked>
+          <label for="yes">Yes</label>
+          <input type="radio" id="no" name="contact" value="no">
+          <label for="no">No</label>
+        </p>
+        <p>Why do you want to make an account?</p>
+        <div>
+          <input type="checkbox" id="scop1" value="enjoy">
+          <label for="scop1">To enjoy the beautiful game of minesweeper</label>
+          <br>
+          <input type="checkbox" id="scop2" value="social">
+          <label for="scop2">To compare my level of play with my friends</label>
+          <br>
+          <input type="checkbox" id="scop3" value="3am">
+          <label for="scop3">It's 3am and I just wanna try something new</label>
+          <br>
+          <input type="checkbox" id="scop4" value="another">
+          <label for="scop4">Another one</label>
+          <br>
+        </div>
+        <label for="comentarii">Comments:</label>
+        <textarea name="comentarii" rows="5" cols="50" wrap="hard" resize="none"></textarea>
+      </fieldset>
+      <button type="submit" id="submit">Send sign-up data</button>
+    </form>
+  </div>
+</body>
+
+</html>
