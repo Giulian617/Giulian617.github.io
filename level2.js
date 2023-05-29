@@ -89,6 +89,7 @@ window.onload=function ()
     let color=JSON.parse(localStorage.getItem("color2"))||"#000";
     document.getElementsByTagName("html")[0].style.backgroundColor=color;
     drawTable(25,25);
+    
     //initialState();
     //addNumbers();
     //addBombs();
