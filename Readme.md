@@ -21,6 +21,7 @@ CSS:
 
 ## update feedback partea 1:
 - video embedding
+- n-am mai apucat sa adaug regulile si desene cu canvas =(
 
 # Cerințe generale minimale JavaScript:
 
